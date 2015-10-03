@@ -1,0 +1,9 @@
+services:
+#    etki_srany_parser.example:
+#        class: Etki\SranyParserBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+  guzzle:
+    class: GuzzleHttp\Client
+  srany_parser.parser:
+    class: Etki\SranyParserBundle\Service\Parser
+    arguments: [ @guzzle, @logger ]

@@ -1,3 +1,7 @@
+etki_srany_parser:
+    resource: "@EtkiSranyParserBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
