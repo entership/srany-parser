@@ -17,7 +17,7 @@ use Symfony\Component\DomCrawler\Crawler;
  * @package Etki\SranyParserBundle\Service
  * @author  Etki <etki@etki.name>
  */
-class Parser
+class ParserLauncher
 {
     /**
      *
@@ -64,5 +64,13 @@ class Parser
             $pages[] = $query['page'];
         }
         $this->logger->info('', ['pages' => $pages]);
+    }
+
+    public function run($url) {
+        // сначала какой-то класс типа UrlChecker предоставляет тип страницы
+        // по ее url
+
+        // затем запускается экземпляр SpecificParser с тем же url и конкретным
+        // типом
     }
 }
